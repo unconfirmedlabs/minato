@@ -24,7 +24,7 @@ public fun disperse_coin<C>(coin: &mut Coin<C>, amounts: vector<u64>, recipients
     disperse_balance_impl(coin.balance_mut(), amounts, recipients);
 }
 
-/// Implementation of disperse_balance and disperse_coin.
+/// Implementation of disperse_balance.
 fun disperse_balance_impl<C>(
     balance: &mut Balance<C>,
     amounts: vector<u64>,
