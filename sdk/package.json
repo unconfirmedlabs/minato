@@ -41,6 +41,7 @@
     "test:consumer": "tsc -p tsconfig.consumer.json",
     "test": "vitest run",
     "benchmark:plan": "bun scripts/benchmark-plan.mjs",
+    "benchmark:testnet": "bun scripts/benchmark-testnet.mjs",
     "golden:derive": "bun scripts/derive-golden-v1.mjs",
     "golden:check": "bun scripts/derive-golden-v1.mjs --check",
     "format": "prettier --write .",

@@ -132,6 +132,18 @@ describe("distribution planner", () => {
             digest: "11111111111111111111111111111111",
           })),
         );
+        if (gasPaymentCount === 0) {
+          transaction.setExpiration({
+            ValidDuring: {
+              minEpoch: "0",
+              maxEpoch: "1",
+              minTimestamp: null,
+              maxTimestamp: null,
+              chain: "11111111111111111111111111111111",
+              nonce: 0,
+            },
+          });
+        }
         const bytes = new TransactionDataBuilder(
           transaction.getData() as TransactionData,
         ).build();

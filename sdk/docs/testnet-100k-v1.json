@@ -1,0 +1,91 @@
+{
+  "schema": "minato/testnet-benchmark/v1",
+  "completedAt": "2026-08-26",
+  "network": "testnet",
+  "packageId": "0x24322ee84beea9938c492815585c5b6587607f264dcc52c00a49873a8c3e2d37",
+  "packagePublishDigest": "8T17CV2Ux9V1jmGbAJKt7X54NY95YdJ6eD47aYCTFTXR",
+  "source": "0x35f5f154f0117464e3379c45c7f3cb6b2d4efedf300acadff8a7e8e9e3a15109",
+  "coinType": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+  "protocolVersion": "134",
+  "referenceGasPrice": "1000",
+  "mainnetComparison": {
+    "protocolVersion": "134",
+    "referenceGasPrice": "100",
+    "projectedNetGasMist": "718090000"
+  },
+  "seed": "minato-testnet-100k-v1",
+  "workload": {
+    "recipientCount": 100000,
+    "amountPerRecipient": "1",
+    "totalAmount": "100000"
+  },
+  "hashes": {
+    "distribution": "0x3e62d268089cbbb6274377e15bbfd652dc446f7cea0f10d4abcc72107dea0026",
+    "plan": "0x054cf33b4622b4799300ac01c4ce7a2167153458f6b85f0ecff6bddc56445288"
+  },
+  "limits": {
+    "maxSignedTransactionBytes": 131072,
+    "maxPureArgumentBytes": 16384,
+    "gasPaymentCount": 0,
+    "signatureModel": {
+      "kind": "serialized-signatures",
+      "lengths": [97]
+    }
+  },
+  "planning": {
+    "planMs": 327.223625,
+    "verifyMs": 278.6759579999999
+  },
+  "batchShape": {
+    "count": 25,
+    "fullBatches": 24,
+    "recipientsPerFullBatch": 4078,
+    "tailRecipients": 2128,
+    "maxTransactionDataBytes": 130944,
+    "maxSignedTransactionBytes": 131047
+  },
+  "totals": {
+    "transactionDataBytes": 3211180,
+    "signedTransactionBytes": 3213755,
+    "simulatedNetGas": "7205600000",
+    "executedNetGas": "7180900000",
+    "buildMs": 13883.791751000012,
+    "simulationMs": 21245.882040999975,
+    "executionMs": 53226.58416500003
+  },
+  "verification": {
+    "sourceAddressBalanceBefore": "34549675805936",
+    "sourceAddressBalanceAfter": "34542494805936",
+    "sourceAddressBalanceDelta": "7181000000",
+    "expectedSourceAddressBalanceDelta": "7181000000",
+    "sampleBalancesBefore": ["0", "0", "0", "0"],
+    "sampleBalancesAfter": ["1", "1", "1", "1"]
+  },
+  "transactionDigests": [
+    "F92ZGKXenvW4eXjZZiviMKPgasGRz3DemHcUu5W9Vgq6",
+    "7Vv3EpvbzUXLUj44fFt5GrzJxMHn3P6vRCTHCXTyBL4d",
+    "EUu5JzTJNchzWa9Vnc4QcyrGgavEzvSXh8W1P8NSmvjd",
+    "9TAeMkEi8i1hcBcn7ti6GeWQ96RQkiKkkCDEBM2MjLTb",
+    "8sF6hyUqX9UxXytuEGNpJbqSxUeqfZAhbuuXESSC6GHF",
+    "5nCaXQ5Pgi87EWSDG3XbTZYPf4KYaVXxrNr5ntw2V3v5",
+    "5EsjsHe4DqzPmkBfR8CerW7X9v7tUuRTcyoepFhTTuLT",
+    "6PAuJCyzG2KZvUcXbTFgqT24uayzCfht42QMMJqEinHm",
+    "FtvsjN71VaLRB3vKB8oFuphDehxX86JrPXxd1TZbJLxN",
+    "EDEuyhYghjhG18Lnaz9hfop4JBtjFCH4ubGeHmM7dmdg",
+    "6E8hHMvMcQPgz2ethmrziSRoXZRGkqgDQaY1kECHpWFY",
+    "Edz7r37vpYMntZbwMkXMyX16HXxBwXnyNXpmTce78j3y",
+    "DDCZmh1BDdHBSXDnCyr9jURAVZmCvREjhGch4xrBj3Hd",
+    "9timLZtBEPpNXtQYs3V8vxYFTekg1Y5RUT8qpv26NopW",
+    "3d6uKTpwHM7uANdDunRKQ7M1nGYRZv75X3BfidAffwBN",
+    "FJCUXe7aFqexzCQqyYZzvFBNxXKPDRVxKbiCJXboL6PY",
+    "DfzNuWAcZNpSp7rfZxQKz1uJf8ECZRbgzcAKyCAY8qbL",
+    "4JcP2ULzW9c6oQwggbqWm1VYRiMas3fkscMrRyCDKxgX",
+    "GgQL4mkyCQEvN4AHnWMVfCUB4diPihvwGD8cQ6tdsoF6",
+    "A92aXgk4znCEXFcH7rQVgMaCbFNM7F4MYei1xEh92P45",
+    "EC8KYXYZC8PRDohN2vcNcndiP4zSTdfTCXfYNEmcYoUA",
+    "FENmPHV5D4EybXBnwf68FSApeLoaNdPeNSFH8FPBEPD5",
+    "EpFSGqqmgwoD7w6Vsx4SxStqx8CN3uKYxkeCrz3cS4KR",
+    "3LibwZ9rnqi5ksm4BqT8qXtAJ2CEPLZbhFXWeinXdkz2",
+    "7soKa6QziZNhMNnHnBoMz11HuLjudQ922sMjw4SM1YJa"
+  ]
+}

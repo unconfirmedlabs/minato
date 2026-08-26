@@ -31,7 +31,7 @@ const plan = createDistributionPlan({
   limits: {
     maxSignedTransactionBytes: 131_072,
     maxPureArgumentBytes: 16_384,
-    gasPaymentCount: 1,
+    gasPaymentCount: 0, // address-balance gas
     // Full serialized generic-signature lengths, including scheme metadata.
     signatureLengths: [97],
   },

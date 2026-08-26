@@ -18,6 +18,7 @@ export interface JsonPayout {
 export interface OfflineTransactionLimits {
   readonly maxSignedTransactionBytes: number;
   readonly maxPureArgumentBytes: number;
+  /** Use zero for address-balance gas; its ValidDuring expiration is included in exact sizing. */
   readonly gasPaymentCount: number;
   readonly signatureLengths?: readonly number[];
   readonly signatureOverheadBytes?: number;

@@ -33,3 +33,5 @@ Callers must provide:
 With signature lengths, the SDK accounts for the `SenderSignedData` vector, three intent enum tags, the signature vector, and every signature byte-vector prefix exactly. A fixed overhead is an explicit caller assertion and should include every byte outside `TransactionData`. Verification reconstructs the transactions and repeats all size checks.
 
 Changing the gas payment count or serialized signature sizes after planning invalidates the size guarantee. Gas object IDs, versions, digests, price, and budget themselves are fixed-width in BCS and do not change the computed length.
+
+A gas payment count of zero selects the address-balance gas size model, including the fixed-width `ValidDuring` expiration added during transaction resolution.

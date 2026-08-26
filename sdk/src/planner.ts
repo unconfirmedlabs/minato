@@ -31,6 +31,20 @@ import type {
 
 const ZERO_DIGEST = "11111111111111111111111111111111";
 
+// Empty gas payment means address-balance gas. Sui resolves these transactions
+// with a ValidDuring expiration. The values vary by epoch, but their BCS shape
+// is fixed, so dummy values preserve exact transaction sizing offline.
+const ADDRESS_BALANCE_EXPIRATION = {
+  ValidDuring: {
+    minEpoch: "0",
+    maxEpoch: "1",
+    minTimestamp: null,
+    maxTimestamp: null,
+    chain: ZERO_DIGEST,
+    nonce: 0,
+  },
+} as const;
+
 function safeInteger(
   value: number,
   label: string,
@@ -381,6 +395,9 @@ function createTransactionSizeModel(
       digest: ZERO_DIGEST,
     })),
   );
+  if (limits.gasPaymentCount === 0) {
+    transaction.setExpiration(ADDRESS_BALANCE_EXPIRATION);
+  }
   const builder = new TransactionDataBuilder(
     transaction.getData() as TransactionData,
   );
