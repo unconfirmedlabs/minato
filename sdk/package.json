@@ -1,0 +1,62 @@
+{
+  "name": "@unconfirmedlabs/minato",
+  "version": "0.1.0",
+  "description": "Offline planning and transaction construction for Minato distributions on Sui",
+  "license": "MIT",
+  "author": "Unconfirmed Labs, LLC <os@unconfirmed.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unconfirmedlabs/minato.git",
+    "directory": "sdk"
+  },
+  "homepage": "https://github.com/unconfirmedlabs/minato#readme",
+  "bugs": "https://github.com/unconfirmedlabs/minato/issues",
+  "type": "module",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "golden",
+    "src",
+    "docs",
+    "LICENSE",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test:consumer": "tsc -p tsconfig.consumer.json",
+    "test": "vitest run",
+    "benchmark:plan": "bun scripts/benchmark-plan.mjs",
+    "golden:derive": "bun scripts/derive-golden-v1.mjs",
+    "golden:check": "bun scripts/derive-golden-v1.mjs --check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "@mysten/sui": "^2.17.0"
+  },
+  "dependencies": {
+    "@noble/hashes": "^2.0.1"
+  },
+  "devDependencies": {
+    "@mysten/sui": "2.17.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "vitest": "^4.0.17"
+  }
+}

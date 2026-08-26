@@ -1,5 +1,9 @@
-build/*
-traces/*
-.trace
-.coverage*
-Pub.*.toml
+move/build/
+move/traces/
+move/.trace
+move/.coverage*
+move/Pub.*.toml
+
+sdk/node_modules/
+sdk/dist/
+sdk/coverage/
