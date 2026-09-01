@@ -19,6 +19,15 @@ The SDK does not query RPC, select gas objects, sign or execute transactions, pa
 npm install @unconfirmedlabs/minato @mysten/sui
 ```
 
+## Published packages
+
+Both deployments are immutable.
+
+| Network | Package ID | Transaction digest |
+| --- | --- | --- |
+| Mainnet | `0x7357ccb584396940dd6749cccf7d00896ecd5185a60bf9dc202a62992b30164c` | `FfsWM8iAhev6ct3D5H9cy1kF1z3yaVswD1ocjXsP5xzk` |
+| Testnet | `0xcdf58ed7e4580118a6a3f2a8077abffe633c551b2f19e95ce01685d42f90b8d9` | `8kM6Qc8aMtxYvi2xC9urj1XedkTjod1RWDZzHp1Doqph` |
+
 ## Usage
 
 ```ts
