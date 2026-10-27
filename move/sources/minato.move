@@ -29,7 +29,6 @@ public fun disperse<C>(
     let mut cursor = 0;
     let group_count = read_uleb128(&runs, &mut cursor);
     assert!(group_count > 0, EInvalidRuns);
-
     let mut recipient_index = 0;
     let mut amount = 0;
     group_count.do!(|_| {
@@ -38,14 +37,12 @@ public fun disperse<C>(
         assert!(delta > 0 && recipient_count > 0, EInvalidRuns);
         assert!(amount <= std::u64::max_value!() - delta, EInvalidRuns);
         assert!(recipient_count <= recipients.length() - recipient_index, EInvalidRuns);
-
         amount = amount + delta;
         recipient_count.do!(|_| {
             balance.split(amount).send_funds(recipients[recipient_index]);
             recipient_index = recipient_index + 1;
         });
     });
-
     assert!(recipient_index == recipients.length(), EInvalidRuns);
     assert!(cursor == runs.length(), EInvalidRuns);
 }
@@ -83,7 +80,6 @@ public fun disperse_withdrawal<C>(
     validate_pair(&recipients_6, &runs_6, &mut padding_started);
     validate_pair(&recipients_7, &runs_7, &mut padding_started);
     validate_pair(&recipients_8, &runs_8, &mut padding_started);
-
     let mut balance = balance::redeem_funds(withdrawal);
     disperse(&mut balance, recipients_1, runs_1);
     disperse_if_present(&mut balance, recipients_2, runs_2);
@@ -133,14 +129,12 @@ fun read_uleb128(bytes: &vector<u8>, cursor: &mut u64): u64 {
         assert!(*cursor < bytes.length() && byte_count < 10, EInvalidRuns);
         let byte = bytes[*cursor];
         *cursor = *cursor + 1;
-
         let payload = (byte & 0x7f) as u64;
         if (byte_count == 9) {
             assert!(payload <= 1, EInvalidRuns);
         };
         value = value | (payload << shift);
         byte_count = byte_count + 1;
-
         if ((byte & 0x80) == 0) {
             assert!(byte_count == 1 || payload != 0, EInvalidRuns);
             return value
