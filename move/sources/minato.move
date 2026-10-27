@@ -26,7 +26,6 @@ public fun disperse<C>(
     runs: vector<u8>,
 ) {
     assert!(!recipients.is_empty() && !runs.is_empty(), EEmptyChunk);
-
     let mut cursor = 0;
     let group_count = read_uleb128(&runs, &mut cursor);
     assert!(group_count > 0, EInvalidRuns);
