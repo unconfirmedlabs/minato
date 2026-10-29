@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Offline planning and transaction construction for Minato distributions on Sui",
   "license": "MIT",
-  "author": "Unconfirmed Labs, Inc. <os@unconfirmed.com>",
+  "author": "Unconfirmed Labs, Inc. <contact@unconfirmed.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/unconfirmedlabs/minato.git",
